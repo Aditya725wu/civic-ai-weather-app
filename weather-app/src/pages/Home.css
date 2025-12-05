@@ -1,0 +1,99 @@
+/* 🌍 Home Page Styling */
+.home-page {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  background: radial-gradient(circle at top, #d6ecff, #b3d8ff, #9ecaff);
+  padding: 60px 20px 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Center Main Content */
+.home-container {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.home-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #08203c;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.home-subtext {
+  font-size: 1.2rem;
+  font-weight: 450;
+  color: #3c5772;
+  margin-bottom: 50px;
+}
+
+/* Feature Cards Container */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Feature Cards */
+.feature-card {
+  width: 290px;
+  padding: 25px;
+  background: #eaf6ff;
+  border-radius: 18px;
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 32px rgba(0, 90, 180, 0.25);
+}
+
+/* Icons */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #0078ff;
+}
+
+/* Headings inside card */
+.feature-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #06223a;
+}
+
+/* Text inside cards */
+.feature-card p {
+  font-size: 15px;
+  color: #294861;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}

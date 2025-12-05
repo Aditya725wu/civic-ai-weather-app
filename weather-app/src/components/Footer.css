@@ -1,0 +1,45 @@
+.footer {
+  width: 100%;
+  background: #0a0f19;
+  color: #eaf4ff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 2px solid #0078ff;
+}
+
+.footer-content h3 {
+  font-size: 22px;
+  color: #00a6ff;
+  font-weight: 700;
+}
+
+.footer-content p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 5px;
+}
+
+.footer-links {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #eaf4ff;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00a6ff;
+  text-shadow: 0px 0px 8px rgba(0,166,255,0.6);
+}
+
+.copy {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 10px;
+}

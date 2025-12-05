@@ -1,0 +1,253 @@
+/* 🌐 RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌐 NAVBAR */
+.navbar {
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(135deg, #0a0f19 0%, #1a2332 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00a6ff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.logo-icon {
+  font-weight: 800;
+  background: linear-gradient(135deg, #00a6ff 0%, #0078ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Menu links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #eaf4ff;
+  font-size: 17px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.nav-links .active,
+.nav-links a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #0078ff 0%, #00a6ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 120, 255, 0.3);
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-toggle, .logout-btn {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  color: #eaf4ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.nav-toggle svg,
+.logout-btn svg {
+  font-size: 18px;
+}
+
+.nav-toggle:hover,
+.logout-btn:hover {
+  color: #00a6ff;
+  background: rgba(0, 166, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #eaf4ff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn svg {
+  font-size: 24px;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(0, 166, 255, 0.1);
+}
+
+/* Chatbot Button */
+.chatbot-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  z-index: 998;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-btn svg {
+  font-size: 28px;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Global Theme */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  color: #0a2647;
+  margin: 0;
+  padding-top: 75px;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+  background: #0a0f19;
+  color: #e8f1ff;
+}
+
+body.dark-mode .navbar {
+  background: linear-gradient(135deg, #0a0f19 0%, #1a2332 100%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0a0f19 0%, #1a2332 100%);
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 998;
+  }
+
+  .nav-links.mobile-open {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px 30px;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .chatbot-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  .nav-toggle, .logout-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

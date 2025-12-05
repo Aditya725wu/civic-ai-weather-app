@@ -1,0 +1,17 @@
+.navbar {
+  background: linear-gradient(90deg, #0066ff, #0040a3);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  position: fixed;   /* <— IMPORTANT */
+  top: 0;
+  left: 0;
+  width: 100%;       /* full width */
+  z-index: 9999;
+
+  border-radius: 0 0 12px 12px;
+}
